@@ -1,0 +1,35 @@
+storage: file
+sessions:
+  -
+    name: long
+    path: access.json
+  -
+    name: jj
+    path: jj.json
+balances:
+  sessions:
+    - long
+    - jj
+mappings:
+  VSB.TO: BONDS
+  ZCN.TO: CANADA
+  ZAG.TO: BONDS
+  VIU.TO: WORLD
+  CASH: CASH
+  VFV.TO: US
+  XCH.TO: WORLD
+  ZDB.TO: BONDS
+  UR.TO: CANADA
+  SU.TO: CANADA
+ignored_accounts:
+  - 51875365
+ignored_symbols:
+  - Y004597.16
+  - ABHD
+  - XGRO.TO
+target_allocation:
+  BONDS: 0.14
+  CASH: 0.02
+  CANADA: 0.28
+  US: 0.28
+  WORLD: 0.28
