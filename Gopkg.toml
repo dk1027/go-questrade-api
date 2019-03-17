@@ -28,3 +28,23 @@
 [prune]
   go-tests = true
   unused-packages = true
+
+[[constraint]]
+  name = "github.com/levigross/grequests"
+  version = "0.10.0"
+
+[[constraint]]
+  name = "gopkg.in/yaml.v2"
+  version = "2.2.2"
+
+[[constraint]]
+  name = "github.com/aws/aws-sdk-go"
+  version = "1.17.9"
+
+[[constraint]]
+  name = "gopkg.in/go-playground/validator.v9"
+  version = "9.27.0"
+
+[[constraint]]
+  name = "github.com/aws/aws-lambda-go"
+  version = "1.9.0"

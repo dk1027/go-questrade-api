@@ -1,0 +1,42 @@
+storage: s3
+region: us-west-2
+bucket: dk1027-go-questrade
+prefix: dk1027
+sessions:
+  -
+    name: long
+    path: access.json
+  -
+    name: jj
+    path: jj.json
+balances:
+  sessions:
+    - long
+    - jj
+mappings:
+  VSB.TO: BONDS
+  ZCN.TO: CANADA
+  ZAG.TO: BONDS
+  VIU.TO: WORLD
+  CASH: CASH
+  VFV.TO: US
+  XCH.TO: WORLD
+  ZDB.TO: BONDS
+  UR.TO: CANADA
+  SU.TO: CANADA
+ignored_accounts:
+  - 51875365
+ignored_symbols:
+  - Y004597.16
+  - ABHD
+  - XGRO.TO
+target_allocation:
+  BONDS: 0.14
+  CASH: 0.01
+  CANADA: 0.283
+  US: 0.284
+  WORLD: 0.283
+publisher:
+  type: sns
+  region: us-west-2
+  topic_arn: arn:aws:sns:us-west-2:749730229712:Questrade
