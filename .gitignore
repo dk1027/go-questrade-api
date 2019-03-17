@@ -1,1 +1,4 @@
 .idea/
+git api/testdata/session.json
+lambda/bin/*
+*.json
