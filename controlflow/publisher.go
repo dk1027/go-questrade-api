@@ -2,6 +2,7 @@ package controlflow
 
 import (
 	"log"
+	"sort"
 
 	"github.com/aws/aws-sdk-go/aws"
 
@@ -39,6 +40,7 @@ func (p *SNSPublisher) Publish(report *Report) error {
 	for k := range *report.Aggregtae {
 		headers = append(headers, k)
 	}
+	sort.Strings(headers)
 	s := ToText(headers, []Table{*report.Aggregtae, *report.Gap, *report.PercentPortfolio})
 	log.Println(s)
 	input := &sns.PublishInput{}
